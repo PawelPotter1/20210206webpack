@@ -14,10 +14,12 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.scss$/,
                 use: [
                     {loader: "style-loader/url"},
-                    {loader: "file-loader", options: {name: "[name].[ext]"}}
+                    {loader: "css-loader"},
+                    {loader: "sass-loader"}
+ //                   {loader: "file-loader", options: {name: "[name].[ext]"}}
                 ]
             },
             {

@@ -1,6 +1,6 @@
 
 import { sum } from "./sum";
-import style from "./css/index.css"
+import style from "./css/index.scss"
 console.log("Hello World");
 console.log(sum(8,3));
 
