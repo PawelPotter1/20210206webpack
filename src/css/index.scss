@@ -1,5 +1,54 @@
+$blueColor: rgb(21,45,32);
+$StandardFontSize: 25px;
+$bigFontSize: $StandardFontSize*1.5;
+
+@mixin cont($width,$height,$bcg) {
+    width: $width;
+    height:$height;
+    background-color: $bcg;
+}
+
+@mixin cont1
+{
+    width: 200px;
+    height:100px;
+    background-color: hotpink;
+}
+
+@mixin cont2 {
+    width: 400px;
+    height:200px;
+    background-color: darkgray;
+}
+
 body{
     h1{
-    color: red;   
+        background-color: blue;
+    color: green;
+    background-color: $blueColor;   
+    }
+    h2{color: $blueColor;}
 }
+
+.wrapper{
+    h2{color:red}
+.sample{background-color: lightsalmon;}
+a {color: $blueColor;
+font-size: $StandardFontSize;
+    &:hover{color:braun}}
 }
+
+.container{
+@include cont(200px,100px,green)
+}
+
+.container2{
+@include cont2();
+}
+
+.sampleClass{
+    &__block{color:yellow}
+.someSpan{color: purple;}
+}
+a {color: pink;
+&:hover{color:indianred}}
